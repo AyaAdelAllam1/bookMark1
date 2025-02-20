@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="image/fave.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+     <main class="py-3 my-5">
+         
+        <div class="container my-5">
+            <div class="text-center text position-relative">
+                <h1 >
+                    Bookmarker
+                 </h1>
+            </div>
+
+            <hr>
+            <div class="text-center text2 my-4">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                  </h2>
+            </div>
+
+            <div>
+                <div class="mb-3">
+                    <label for="bookmarkName" class="form-label">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input type="text" oninput="validtionName()" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="bookmarkURL" class="form-label">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+
+                    </label>
+                    <input oninput="validtionURL()" type="url" class="form-control" id="bookmarkURL" placeholder="Websit URL">
+                  </div>
+                  <div class="text-center my-4 submit">
+                    <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+                  </div>
+
+                     <hr>
+
+                  <table class="table mt-4 text-center bg-light">
+                    <thead>
+                      <tr><th class="text-capitalize">index</th>
+                      <th class="text-capitalize">Website Name</th>
+                      <th class="text-capitalize">Visit</th>
+                      <th class="text-capitalize">Delete</th>
+                    </tr></thead>
+                    <tbody id="tableContent"></tbody>
+                  </table>
+                  
+                 <div class="box-submit d-none">
+                    <div class="box m-auto rounded-3 my-5">
+                        <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                            <div class="circles d-flex">
+                              <span class="rounded-circle me-2"></span>
+                              <span class="rounded-circle me-2"></span>
+                              <span class="rounded-circle me-2"></span>
+                            </div>
+                            <button class="btn border-0" id="closeBtn">
+                              <i class="fa-solid fa-xmark close fs-3"></i>
+                            </button>
+                          </header>
+                          <p class="m-0 pb-2">
+                            Site Name or Url is not valid, Please follow the rules below :
+                          </p>
+                          <ol class="item list-unstyled m-0">
+                            <li>
+                              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                              contain at least 3 characters
+                            </li>
+                            <li>
+                              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                              valid one
+                            </li>
+                          </ol>
+                      </div>
+                 </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+     </main>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
